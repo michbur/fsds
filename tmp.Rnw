@@ -1,0 +1,17 @@
+\documentclass{beamer}
+\usetheme{focus}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\begin{document}
+
+\begin{frame}{Akwizycja danych}
+
+<<my-label, eval=TRUE>>=
+set.seed(1213)  
+x = cumsum(rnorm(100))
+@
+
+\end{frame}
+
+\end{document}
