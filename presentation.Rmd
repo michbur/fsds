@@ -10,6 +10,12 @@ output:
       in_header: preamble.tex
 ---
 
+## About me
+
+ - bioinformatician (Warsaw University of Technology, Brandenburg University of Technology Cottbus-Senftenberg, .prot),
+ - founder of the Why R? Foundation and Wrocław R User Group,
+ - facilitator of McKinsey Tech Meetup.
+
 # Full stack data science
 
 ## Full stack data science
@@ -90,7 +96,7 @@ Memory overhead is the maximum memory used during the execution minus the memory
 
 ## mlr
 
-**mlr**: a standardized interface to machine learning in **R**.
+**mlr**: a standardized interface to machine learning in **R** (by Bernd Bischl and Michael Lang).
 
 Alternatives: **caret**, **parsnip**.
 
@@ -143,11 +149,14 @@ cv <- makeResampleDesc("CV", iters = 3)
 resample(learner = lrn_rng, task = iris.task, resampling = cv)
 ```
 
+
 ## Bayesian optimization
+
+$$\max_{x \in \mathbb{R}}f(x)$$
 
 The *posterior* probability of a model (or theory, or hypothesis) $M$ given evidence (or data, or observations) $E$ is proportional to the likelihood of $E$ given $M$ multiplied by the *prior* probability of $M$:
 
-
+$$P(M|E) \propto P(E|M)|P(M) $$
 
 ## Bayesian optimization
 
@@ -299,11 +308,13 @@ Parallelization:
 # multicore scaling
 make(plan, jobs = 12)
 
-# or enable supercomputing clusters with the future package 
+# or enable supercomputing clusters with 
+# the future package 
 drake_hpc_template_file("torque_batchtools.tmpl") 
 library(future.batchtools)
 future::plan(batchtools_torque, 
-             template = "torque_batchtools.tmpl", workers = 8000)
+             template = "torque_batchtools.tmpl", 
+             workers = 8000)
 make(plan, parallelism = "future_lapply")
 ```
 
