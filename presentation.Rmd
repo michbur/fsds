@@ -332,6 +332,8 @@ make(plan, parallelism = "future_lapply")
 \includegraphics[width=0.85\textwidth]{static_figure/keynotes.jpg}
 \end{figure}
 
+Workshops: Jan Gorecki (data.table, H$_2$O), Matteo Fasiolo (University of Bristol).
+
 \url{whyr.pl/2019}
 
 ## $MI^2$ Data Lab
